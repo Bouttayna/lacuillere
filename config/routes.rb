@@ -3,17 +3,13 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :restaurants, only: [:index, :new, :create, :show] do
-   resources :reviews, only: [:new, :create]
+   resources :reviews, only: [:create]
   end
-
-
 
   # resources :restaurants,   do
   #   member do
   #     get 'review', to: "restaurants#review"
   #   end
-
-
   # end
 
 
