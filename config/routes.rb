@@ -2,6 +2,21 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  resources :restaurants, only: [:index, :new, :create, :show] do
+   resources :reviews, only: [:new, :create]
+  end
+
+
+
+  # resources :restaurants,   do
+  #   member do
+  #     get 'review', to: "restaurants#review"
+  #   end
+
+
+  # end
+
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

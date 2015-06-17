@@ -1,0 +1,10 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.select :category, [["chinese", "chinese"],["italian","italian"],["japanese","japanese"],["french","french"],["belgian","belgian"]] %>
+
+  <%= f.button :submit %>
+<% end %>

@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+5.times do
+  restaurant = Restaurant.new({
+  name: Faker::Name.name,
+  address: Faker::Address.street_address,
+  category: ["chinese", "italian", "japanese", "french", "belgian"].sample,
+  phone_number: Faker::PhoneNumber.phone_number
+  })
+  restaurant.save
+end
